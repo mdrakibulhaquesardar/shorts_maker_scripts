@@ -45,7 +45,16 @@ Script টি run করার জন্য নিচের packages গুল�
 1. প্রথমে Python install করুন: [Python Download](https://www.python.org/downloads/)
 
 2. FFmpeg install করুন:
-   - Windows: [FFmpeg Download](https://ffmpeg.org/download.html)
+   - Windows:
+     - Option 1: [FFmpeg Download](https://ffmpeg.org/download.html) থেকে download করে install করুন
+     - Option 2: Chocolatey package manager ব্যবহার করে:
+       ```powershell
+       # প্রথমে Chocolatey install করুন (PowerShell এ Administrator হিসেবে run করুন)
+       Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+       
+       # তারপর FFmpeg install করুন
+       choco install ffmpeg
+       ```
    - Linux: `sudo apt-get install ffmpeg`
    - Mac: `brew install ffmpeg`
 
@@ -144,6 +153,7 @@ python main.py
 1. FFmpeg error:
    - FFmpeg properly installed আছে কিনা check করুন
    - System PATH এ FFmpeg add করা আছে কিনা check করুন
+   - Windows এ Chocolatey install করা থাকলে `choco list --local-only` command দিয়ে FFmpeg installed আছে কিনা check করুন
 
 2. ImageMagick error:
    - ImageMagick properly installed আছে কিনা check করুন
