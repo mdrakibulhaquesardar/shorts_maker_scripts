@@ -1,0 +1,11 @@
+# Core packages
+yt-dlp>=2023.3.4  # YouTube video download
+moviepy>=1.0.3    # Video editing
+opencv-python>=4.7.0  # Image processing
+numpy>=1.24.3     # Numerical operations
+scipy>=1.10.1     # Scientific computing
+librosa>=0.10.0   # Audio processing
+scikit-learn>=1.2.2  # Machine learning
+tqdm>=4.65.0      # Progress bars
+colorama>=0.4.6   # Colored console output
+ffmpeg-python>=0.2.0  # FFmpeg integration
